@@ -1,0 +1,36 @@
+{
+  "name": "bot-template",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "node --env-file=.env ./src/index.js",
+    "register": "node --env-file=.env ./src/utils/functions/registerCommands.js"
+  },
+  "imports": {
+    "#commands/*": "./src/commands/*.js",
+    "#interactions/*": "./src/interactions/*.js",
+    "#events/*": "./src/events/*.js",
+    "#models/*": "./src/models/*.js",
+    "#utils/*": "./src/utils/*.js",
+    "#root/*": "./src/*.js",
+    "#config": "./src/config.json",
+    "#index": "./src/index.js"
+  },
+  "keywords": [],
+  "author": "cloud_yy",
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "^11.22.0",
+      "onFail": "download"
+    }
+  },
+  "type": "module",
+  "dependencies": {
+    "axios": "^1.19.0",
+    "axios-rate-limit": "^1.9.0",
+    "discord.js": "^14.27.0",
+    "express": "^5.2.1",
+    "node-cron": "^4.6.0"
+  }
+}
